@@ -18,13 +18,16 @@ Building two main projects:
 
 ## How to Run Locally
 ```bash
-git clone https://github.com/RahatVortex98/super-simple-react.git
-cd super-simple-react
-npm install
-npm run dev
+  git clone https://github.com/RahatVortex98/super-simple-react.git
+  cd super-simple-react
+  npm install
+  npm run dev
+```
 
 ## Progress
-Tracking my completion of the SuperSimpleDev React course sections (update by editing this file or clicking checkboxes on GitHub):
+
+Tracking my completion of the SuperSimpleDev React course  
+(Update by editing this file or clicking checkboxes on GitHub)
 
 - [ ] 0:00 – Introduction & Setup (Vite project creation)
 - [ ] React Basics & JSX
@@ -42,3 +45,5 @@ Tracking my completion of the SuperSimpleDev React course sections (update by ed
 - [ ] Styling & Polish
 - [ ] Final Review & Optimizations
 - [ ] Deploy to Vercel/Netlify/Render (bonus)
+
+---
