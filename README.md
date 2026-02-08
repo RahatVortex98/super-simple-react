@@ -47,3 +47,71 @@ Tracking my completion of the SuperSimpleDev React course
 - [ ] Deploy to Vercel/Netlify/Render (bonus)
 
 ---
+
+# ⚛️ React Basics
+
+**React** is an external JavaScript library that helps us build user interfaces and websites more easily.
+
+---
+
+## 📦 Why are there 2 external libraries for React?
+
+React is split into two libraries to separate shared logic from platform-specific logic.
+
+### 1. React
+- Contains shared/core features
+- Used for both web and mobile apps
+- Handles components, state, props, hooks, etc.
+
+### 2. ReactDOM
+- Contains features specific to the web
+- Responsible for rendering React components into the browser DOM
+
+### Usage
+
+- **To create websites**
+  - Load `React` + `ReactDOM`
+
+- **To create mobile apps**
+  - Load `React` + `React Native`
+
+---
+
+## 🔄 What is Babel?
+
+**Babel** is a JavaScript compiler.
+
+- Converts modern JavaScript into browser-compatible JavaScript
+- Translates JSX into plain JavaScript
+- Allows us to use latest JS features safely
+
+---
+
+## 🧩 What is JSX?
+
+**JSX (JavaScript XML)** is a syntax extension for JavaScript.
+
+- Looks like HTML
+- Written directly inside JavaScript
+- Makes UI code easier to read and write
+
+### Example
+
+```jsx
+const button = <button>hello</button>;
+```
+### Problems
+- Our browser doesn't understand JSX. Here comes Babel, which translates the JSX.
+```jsx
+<script src="http://unpkg.com/supersimpledev/babel.js></script>"
+<script type="text/babel">
+```
+
+
+
+
+
+
+
+
+
