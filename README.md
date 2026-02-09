@@ -138,7 +138,7 @@ const elements =
 ```
 ✅ What We Can Do
 
-- A <div> is a container element.
+- A "div" is a container element.
 - Even if it contains multiple elements, React treats it as one element.
 
 ```JS
@@ -172,5 +172,116 @@ React is an external library that helps us create websites more easily.
 
 
 # ⚛️ Lesson 2:Components & Props (start Chatbot project)
+
+- Functionality:
+  1. Get today's date.
+  2. Flip a coin.
+  3. Roll a dice.
+
+### Boilerplate:
+
+```JSX
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChatBot</title>
+
+    <!-- React 18 CDNs + Babel Standalone -->
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+
+    <!-- ALL React/JSX code MUST go here -->
+    <script type="text/babel">
+        // Example starting JSX (replace with your ChatInput or whatever the video asks)
+        const element = (
+            <div>
+                <h1>Welcome to ChatBot!</h1>
+                <p>This is the starting boilerplate.</p>
+                {/* Your component or content goes here */}
+            </div>
+        );
+
+        // Render it
+        const root = ReactDOM.createRoot(document.getElementById('root'));
+        root.render(element);
+    </script>
+</body>
+</html>
+```
+### Component => a piece of the website.
+
+- When building websites:
+ 1. It's better to split up the website into pieces.
+ 2. So, we can work on a small piece of the website at a time.
+
+### Creating 1st component:
+
+- Rules:
+  1. The Component name must start with a  capital letter.(PascalCase)
+
+     ```JS
+      function ChatInput(){
+     
+     };
+     ```
+  2. JSX is more strict than normal HTML; all elements need a closing tag.
+    ```HTML
+      <input></input>
+    
+          Use this instead of this,
+
+       <input />
+    ```
+
+  3. We can create our own HTML element.
+     ```HTML
+      <ChatInput> </ChatInput> 
+     ```
+
+  4. Up until now, we used div to make a group, but there is another way to make a group, called fragment "<></>"
+     - using div
+       ```JSX
+        function ChatInput() {
+            return (
+                <div>
+                    {/* Input field for typing messages */}
+                    <input />
+
+                    {/* Button to send message */}
+                    <button>Send</button>
+                </div>
+            );
+        }
+       ```
+       - using fragment
+      ```JSX
+        function ChatInput() {
+            return (
+                <>
+                    {/* Input field for typing messages */}
+                    <input />
+
+                    {/* Button to send message */}
+                    <button>Send</button>
+                </>
+            );
+        }
+       ```
+
+
+
+
+
+
+
+
+
+
 
 
