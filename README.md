@@ -48,7 +48,7 @@ Tracking my completion of the SuperSimpleDev React course
 
 ---
 
-# ⚛️ React Basics
+# ⚛️ Lesson 1: React Basics
 
 **React** is an external JavaScript library that helps us build user interfaces and websites more easily.
 
@@ -107,11 +107,70 @@ const button = <button>hello</button>;
 <script type="text/babel">
 ```
 
+## 🧩 How We Display Elements in React
+
+---
+
+### 📌 Example
+
+---
+
+### ▶️ Displaying a Single Element
+
+```js
+const paragraph = <p>paragraph of text</p>;
+
+const container = document.querySelector('.js-container');
+ReactDOM.createRoot(container).render(paragraph);
+```
+### ▶️ Displaying Multiple Elements
+❌ We can’t pass multiple elements into render()
+
+```JS
+.render(paragraph, hello);
+```
+❌ We can’t store multiple JSX elements directly in a single variable
+
+```JS
+const elements =
+  <button>hello</button>
+  <p>paragraph of text</p>;
+```
+✅ What We Can Do
+
+- A <div> is a container element.
+- Even if it contains multiple elements, React treats it as one element.
+
+```JS
+const div = <div>
+  <button>hello</button>
+  <p>paragraph of text</p>
+</div>;
+```
+- ✨ Cleaned-Up Version (Recommended)
+
+Using parentheses makes JSX cleaner and more readable.
+
+```JS
+const div = (
+  <div>
+    <button>hello</button>
+    <p>paragraph of text</p>
+  </div>
+);
+
+```
+### ⚛️ Why React?
+
+React is an external library that helps us create websites more easily.
+
+- Advantages:
+
+1. A more natural way to build UI
+2. Create as many elements as you want. Then give them to React to render
+3. Easier to find errors.Allows inserting JavaScript code directly inside elements (JSX)
 
 
-
-
-
-
+# ⚛️ Lesson 2:Components & Props (start Chatbot project)
 
 
