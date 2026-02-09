@@ -245,6 +245,7 @@ React is an external library that helps us create websites more easily.
      ```
 
   4. Up until now, we used div to make a group, but there is another way to make a group, called fragment "<></>"
+     - What is fragment => group elements together, without creating an extra div.
      - using div
        ```JSX
         function ChatInput() {
@@ -273,6 +274,54 @@ React is an external library that helps us create websites more easily.
             );
         }
        ```
+
+### ChatInput 1st element :
+
+```JSX
+<script type="text/babel">
+       /*
+          ChatInput Component
+          - This is a React function component
+          - It returns JSX (HTML-like syntax)
+        */
+        function ChatInput() {
+            return (
+                <>
+                    {/* Input field for typing messages */}
+                    <input placeholder="Send a message to chatbot" size="30"/>
+
+                    {/* Button to send message */}
+                    <button>Send</button>
+                </>
+            );
+        }
+
+        /*
+          JSX Element
+          - We call the ChatInput component
+          - Components return elements, which React can render
+        */
+        const app = (
+            <>
+              <ChatInput />
+            </>
+        );
+
+        /*
+          Create React root
+          - Connect React to the real DOM
+        */
+        const root = ReactDOM.createRoot(
+            document.getElementById('root')
+        );
+
+        /*
+          Render JSX into the browser
+        */
+        root.render(app);
+    </script>
+
+```
 
 
 
