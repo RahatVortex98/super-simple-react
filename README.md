@@ -324,7 +324,9 @@ React is an external library that helps us create websites more easily.
 ```
 
 
+### Props =>Properties
 
+- Make our component reusable.
 
 
 
