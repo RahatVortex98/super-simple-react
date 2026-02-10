@@ -328,11 +328,95 @@ React is an external library that helps us create websites more easily.
 
 - Make our component reusable.
 
+```JS
+function ChatMessage(props){
+            const message =props.message;
 
+            return(
+                <div>
+                    {message}
+                    <img src="user.png" width="50"/>
+                </div>
+            );
+        }
 
+//message comes from render ,
 
+ <ChatMessage message="hello chatbot"/>
+```
 
+### Shortcuts in React
+1. 
+```JS
+const message = props.message;
+const sender = props.sender;
 
+//shortcut form -destructuring
 
+const {message,sender}=props;
 
+```
+2. more shorter way:
+```JS
+ function ChatMessage({message,sender}){
+            //const message =props.message;
+            //const sender = props.sender;
+
+            //const {message,sender}=props; 
+```
+
+3. if statement directly into JSX:
+  - Guard Operator:
+
+  - Syntax:
+    ```JS
+      condition && doSomething();
+      {isLoading && <p>Loading...</p>}
+    ```
+    ```JS
+      const result = value1 && value2;
+    # if value1 is true, the result will be value2,
+    # this works like an if statement
+    ```
+
+    ```JS
+     <div>
+    {sender==="robot"&&<img src="robot.png" width="50" />}
+    {message}
+    {sender==="user"&& <img src="user.png" width="50" />}
+    </div>
+    ```
+4. Use a component to create the app:
+
+   ```JS
+     function App(){
+                return(
+                         <>
+              <ChatInput />
+              <ChatMessage message="hello chatbot"sender="user"/>
+              <ChatMessage message="Hello! How can i help you?" sender="robot"/>
+              <ChatMessage message="Can you get me todays date?" sender="user"/>
+              <ChatMessage message="Today is September27" sender="robot"/>
+            </>
+                );
+
+            }
+
+                 & render this way,
+   root.render(<App />);
+   ```
+   5. Best practice: Use a component (App) to create the website.
+
+    ```JS
+     function App()
+      root.render(<App />);
+    ```
+# ⚛️ Lesson 3:State, Event Handlers, chatbot project feature
+
+### State: Make our website interactive
+
+- Up until now, we used a manual msg systen; now we will use JS to generate these components.
+  step1: Save the data,
+
+  step2: Generate the HTML,
 
