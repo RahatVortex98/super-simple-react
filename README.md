@@ -415,8 +415,67 @@ const {message,sender}=props;
 
 ### State: Make our website interactive
 
-- Up until now, we used a manual msg systen; now we will use JS to generate these components.
+- Up until now, we used a manual msg system; now we will use JS to generate these components.
   step1: Save the data,
-
+    ```
+      const chatMessages = [
+                        {
+                        message: "hello chatbot",
+                        sender: "user",
+                        id: "id1"
+                        },
+                        {
+                        message: "Hello! How can I help you?",
+                        sender: "robot",
+                        id: "id2"
+                        },
+                        {
+                        message: "Can you get me todays date?",
+                        sender: "user",
+                        id: "id3"
+                        },
+                        {
+                        message: "Today is September 27",
+                        sender: "robot",
+                        id: "id4"
+                        }
+                    ];
+    
+    ```
   step2: Generate the HTML,
+    - to generate HTML, we need map() => which gives us new value
+    - remember 1 this in the function we call plural(chatMessages) bt when we call map it will(chatMessage),
+   ```
+   .map()
 
+   value1 ----->newValue1;
+   value2 ----->newValue2;
+   value3 ----->newValue3;
+
+   ```
+   - Actual Code,
+   ```
+   {chatMessages.map((chatMessage) => (
+                            <ChatMessage
+                            key={chatMessage.id}
+                            message={chatMessage.message}
+                            sender={chatMessage.sender}
+                            />
+                        ))}
+
+   ```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
