@@ -413,7 +413,7 @@ const {message,sender}=props;
     ```
 # ⚛️ Lesson 3:State, Event Handlers, chatbot project feature
 
-### State: Make our website interactive
+### State: data that is connected to the HTML.(When we update this data it will update the HTML)
 
 - Up until now, we used a manual msg system; now we will use JS to generate these components.
   step1: Save the data,
@@ -467,8 +467,55 @@ const {message,sender}=props;
 
 
 
+### Event Handler => interactive our website
 
+```JS
+  <button onClick={sendMessage}>Send Message</button>
 
+      onClick     =>Event
+      sendMessage =>Event Handler
+    
+```
+
+- Convert chatMessages into state.
+  1. The current data:
+  2. A function that updates the data
+     
+     ```Plaintext
+       If we update the data directly, React will not update the HTML.
+       If we use the function "setChatMessages" to update the data, React will update the HTML. => This is also known as "Updater Function."
+       In React, we should not modify the data directly. We should always create a copy and then modify the copy. 
+     ```
+- State Review :
+
+```Plaintext
+state = data that is connected to the HTML.
+      -> when we update this data, it will update the HTML,
+      -> to convert some data, we use "React.useState"
+      -> useState gives us 2 values: i) the current data =>array[0]
+                                     ii) 2nd value is a function which is called the Updater function => array[1]
+                                  
+      array destructuring
+
+      function square(){
+        const[value,setValue] =useState();
+      }
+      
+```
+
+- Do not use DOM manually
+
+```
+event.target = gives us the element that we're typing in (input is the element)
+
+```
+- State = save data that change overtime.
+
+- Lifting the state up
+  ```
+  Share state between multiple components.
+
+  ```
 
 
 
