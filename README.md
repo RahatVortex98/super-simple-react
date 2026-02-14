@@ -517,7 +517,23 @@ event.target = gives us the element that we're typing in (input is the element)
 
   ```
 
+# ⚛️ Lesson 4:Css with react hooks
 
+CSS:
+- In React, we named "ClassName"
+- Space inside an element =padding
+- Space outside an element =margin
+- Flexbox = create a flexible layout, layout = how the elements are positioned
+          - To use flexbox:
+          1. we need a container around our element. use div to make container.
+          2. add display:flex; to container.
+          3. use flexbox features.
+              - Example: flex-grow: makes an element grow and take the remaining space.
+                         justify-content: controls how the elements are displayed horizontally.  
+- We cannot style a fragment with CSS.
+- When a block element (like div) is inside a flexbox:
+          - It no longer takes up the entire line
+          - It only takes up as much space as it needs to.
 
 
 
