@@ -519,26 +519,73 @@ event.target = gives us the element that we're typing in (input is the element)
 
 # ⚛️ Lesson 4:Css with react hooks
 
-CSS:
-- In React, we named "ClassName"
-- Space inside an element =padding
-- Space outside an element =margin
-- Flexbox = create a flexible layout, layout = how the elements are positioned
-          - To use flexbox:
-          1. we need a container around our element. use div to make container.
-          2. add display:flex; to container.
-          3. use flexbox features.
-              - Example: flex-grow: makes an element grow and take the remaining space.
-                         justify-content: controls how the elements are displayed horizontally.  
-- We cannot style a fragment with CSS.
-- When a block element (like div) is inside a flexbox:
-          - It no longer takes up the entire line
-          - It only takes up as much space as it needs to.
+#  CSS Notes (React + Flexbox)
 
+##  React Styling Basics
+- In **React**, we use `className` instead of `class`.
+- **Padding** → Space **inside** an element  
+- **Margin** → Space **outside** an element  
 
+---
 
+##  Flexbox (Flexible Layout)
+Flexbox is used to create **flexible layouts** — it controls how elements are positioned.
 
+###  How to Use Flexbox
+1. Create a **container** (usually a `div`).
+2. Add:
+   ```css
+   display: flex;
 
+3. Use flexbox properties.
 
+🔧 Common Flexbox Properties
 
+flex-grow → Makes an element grow and take remaining space
+
+justify-content → Controls horizontal alignment of elements
+
+align-items -> controls how the elements are displayed vertically.
+
+100vh -> viewport height,100% of the height of the browser
+Important Notes
+
+flex-direction -> which direction the elements are positioned
+
+- You cannot style a React Fragment with CSS.
+- When a block element (like div) is inside a flex container:
+        - It no longer takes the full width
+        - It only uses the space it needs
+
+### Hooks
+
+- Insert React features into our component
+
+```JS
+React.useState() is a hook
+
+const [inputText,setInputText]=React.useState('');
+
+```
+- State = automatically updates the HTML when the data changes.
+- useEffect() = run some code after the component is created or updated.
+             ```
+              React will run this function
+                 -after component is created
+                 -every time the component is updated.
+                 -[] = only run once after the component is created.
+            ```
+- useRef() = automatically saves an HTML element from the component
+  
+⚠️
+- Put hooks at the top of the component
+- Hooks should not be inside anything
+  
    
+
+
+
+
+
+
+
